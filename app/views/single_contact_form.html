@@ -1,0 +1,26 @@
+<div ng-controller="SingleContactCtrl">
+  <form name="myForm">
+    <fieldset class="form-group">
+      <label for="exampleSelect1">Contact Manager Environment</label>
+      <select class="form-control" id="exampleSelect1" ng-model="contact.cmEnv" ng-init="contact.cmEnv = cmEnvs[0]" ng-options="cmEnv.name for cmEnv in cmEnvs">
+      </select>
+    </fieldset>
+    <fieldset class="form-group">
+      <label for="contactType">Contact Type</label>
+      <!-- <input type="text" name="contactTypeInput" class="form-control" id="contactTypeInput" placeholder="Enter Contact Type e.g. Home_Service_Provider", ng-model="contact.specialty" required>
+      <small class="text-muted">Contact Type is 'Specialty' in Contact Manager.</small> -->
+      <!-- <div ng-show="myForm.$submitted">
+        <div ng-show="myForm.contactTypeInput.$error.required">Contact Type is required.</div>
+      </div> -->
+      <select class="form-control" id="exampleSelect2" ng-model="contact.specialty" ng-init="contact.specialty = specialties[0]" ng-options="specialty.value for specialty in specialties">
+      </select>
+    </fieldset>
+    <fieldset class="form-group">
+      <label for="orgName">Organization Name</label>
+      <input type="text" class="form-control" id="orgNameInput" placeholder="Enter Org Name e.g. 4 Dimensions Building Contractors", ng-model="contact.keyword" required>
+      <small class="text-muted">Org Name is 'Keyword' in Contact Manager.</small>
+    </fieldset>
+    <button type="submit" class="btn btn-primary", ng-click="myForm.$valid && search(contact)">Search</button>
+    <button type="reset" class="btn btn-primary">Reset</button>
+  </form>
+</div>

@@ -1,0 +1,19 @@
+<div class="modal-header">
+  <h3>Login</h3>
+</div>
+<form>
+  <div class="modal-body">
+    <label>Username</label>
+    <input type="text" ng-model="user.username" />
+    <label>Password</label>
+    <input type="password" ng-model="user.password" />
+  </div>
+  <div class="modal-footer">
+      <!-- <span ng-if="auth_error">{{auth_error}}</span> -->
+      <div ng-if="auth_error" class="alert alert-danger" style="display:inline" role="alert">
+  <span class="glyphicon" aria-hidden="true"></span>
+  <span class="sr-only">Error:</span>{{auth_error}}</div>
+      <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+      <input type="submit" class="btn primary-btn" value="Submit" ng-click="submitLoginForm()"/>
+  </div>
+</form>

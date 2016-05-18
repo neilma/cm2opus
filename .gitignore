@@ -7,3 +7,5 @@ tmp
 .idea
 .npmrc
 .bowerrc
+.sass-cache
+.hg

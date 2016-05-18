@@ -18,6 +18,10 @@
   margin-right: auto;
 }
 
+.custom-nav-links {
+  padding-top: 8px;
+}
+
 body {
   margin-bottom: 80px !important;
 }
